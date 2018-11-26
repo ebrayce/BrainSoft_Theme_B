@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+
+    <!-- Theme Outline css -->
+    <link rel="stylesheet" href="css/theme-outline.min.css" >
+
+    <!-- Theme Colors CSS -->
+    <link rel="stylesheet" href="css/theme-color.min.css" >
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css" >
+
+
+
+    <title>Theme</title>
+</head>
+<body>
+
+<div id="MAIN_WRAPPER" class="">
+    <div id="DASHBOARD" class="bg-dark">
+        <div  class="navbar Theme-light blue-light justify-content-center">
+            <span class="navbar-text ">DASHBOARD</span>
+        </div>
+        <div>
+            <div class="accordion mt-2" id="accordionExample">
+                <div class="card mt-1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-block Theme-light blue-light" type="button" data-toggle="collapse" data-target="#users" aria-expanded="true" aria-controls="collapseOne">
+                            Users
+                        </button>
+                    </h5>
+                    <div id="users" class="collapse show" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-block ">Add Users</a>
+                            <a href="#" class="btn btn-block ">Show Users</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-block Theme-light blue-light" type="button" data-toggle="collapse" data-target="#regions" aria-expanded="true" aria-controls="collapseOne">
+                            Regions
+                        </button>
+                    </h5>
+                    <div id="regions" class="collapse" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-block ">Add Region</a>
+                            <a href="#" class="btn btn-block">Show Region</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="BODY">
+        <div class="border-left border-dark">
+            <div id="HEADER" class="Theme-dark blue-dark">
+                <div id="btnDashToggle" class="navbar">
+                    <button  onclick="ToggleThemeState(DashboardState);" type="button" class="btn Theme-dark blue-dark ">&#9776</button>
+                    <span class="navbar-text">BRAINSOFT SOLUTIONS</span>
+
+                    <div class="dropdown">
+                        <button class="btn Theme-dark blue-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ACCOUNT
+                        </button>
+
+
+                        <div class="dropdown-menu animated " aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">LogOut</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="CONTENT" class="">
+                <div class="p-2">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="FOOTER" class="Theme-dark blue-dark">
+                <div id="btnTheme" class="navbar ">
+                    <span class="navbar-text">Copyright &copy 2018</span>
+                    <button onclick="ToggleThemeContainer()"  class="btn Theme-dark blue-dark nav-item " type="submit">Theme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div  id="ThemeContainer" class="animated   bounceOutRight card shadow-lg" style="width: 200px; position: fixed; right: 1%; bottom: 1%;" >
+    <div class="p-1 mb-3">
+        <button onclick="blue()" class="btn blue-dark btn-block">Blue</button>
+        <button onclick="purple()" class="btn purple-dark btn-block">Purple</button>
+        <button onclick="green()" class="btn green-dark btn-block">Green</button>
+        <button onclick="yellow()" class="btn yellow-dark btn-block">Yellow</button>
+        <button onclick="cyan()" class="btn cyan-dark btn-block">Cyan</button>
+        <button onclick="indigo()" class="btn indigo-dark btn-block">Indigo</button>
+    </div>
+
+    <button onclick="ToggleThemeContainer()" class="btn btn-danger">Hide</button>
+
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jq.js" ></script>
+<script src="js/popper.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/theme-outline.min.js" ></script>
+<script src="js/theme-color.min.js" ></script>
+
+</body>
+</html>
