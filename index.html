@@ -26,18 +26,19 @@
 <body style="overflow:hidden;">
 
 <div id="MAIN_WRAPPER" class="" style="">
-    <div id="DASHBOARD" class="bg-dark" style="">
+    <div id="DASHBOARD" class="bg-dark" style="" >
         <div  class="navbar Theme-light blue-light justify-content-start">
             <span class="navbar-text ">DASHBOARD</span>
         </div>
         <div>
             <div class="accordion mt-2" id="accordionExample">
                 <div class="card mt-1">
-                    <h5 class="mb-0">
+                    <div class="mb-0 btn-group">
+                        <span id="Icon" class="border-right border-dark input-group-append blue-light p-1">@</span>
                         <button class="btn btn-block Theme-light blue-light" type="button" data-toggle="collapse" data-target="#users" aria-expanded="true" aria-controls="collapseOne">
                             Users
                         </button>
-                    </h5>
+                    </div>
                     <div id="users" class="collapse show" data-parent="#accordionExample">
                         <div class="card-body">
                             <a href="#" class="btn btn-block ">Add Users</a>
@@ -70,13 +71,13 @@
                     <button  onclick="ToggleThemeState(DashboardState);" type="button" class="btn Theme-dark blue-dark ">&#9776</button>
                     <span class="navbar-text">BRAINSOFT SOLUTIONS</span>
 
-                    <div class="dropdown">
+                    <div class="dropdown ">
                         <button class="btn Theme-dark blue-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ACCOUNT
                         </button>
 
 
-                        <div class="dropdown-menu animated " aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu  " aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">LogOut</a>
                             <a class="dropdown-item" href="#">Another action</a>
                         </div>

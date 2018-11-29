@@ -109,6 +109,7 @@ function OpenDashboard() {
 
     switch (ViewPort){
         case 'sm':
+            // alert('Small Screen');
             Body_width  = Main_Wrapper_width * 0.2;
             Dashboard_width  = parseInt(Main_Wrapper_width) - parseInt(Body_width);
             Header_width = Main_Wrapper_width;
@@ -119,8 +120,9 @@ function OpenDashboard() {
             break;
 
         case 'md':
-            Body_width  = Main_Wrapper_width * 0.8;
-            Dashboard_width  = Main_Wrapper_width * 0.2;
+            // alert('Medium screen');
+            Body_width  = Main_Wrapper_width * 0.6;
+            Dashboard_width  = parseInt(Main_Wrapper_width) - parseInt(Body_width);
             Header_width = Body_width;
             Content_width = Body_width;
             Footer_width = Body_width;
@@ -129,8 +131,9 @@ function OpenDashboard() {
             break;
 
         case 'lg':
-            Body_width  = Main_Wrapper_width * 0.8;
-            Dashboard_width  = Main_Wrapper_width * 0.2;
+            // alert('Large Screen');
+            Body_width  = Main_Wrapper_width * 0.7;
+            Dashboard_width  = parseInt(Main_Wrapper_width) - parseInt(Body_width);
             Header_width = Body_width;
             Content_width = Body_width;
             Footer_width = Body_width;
@@ -139,11 +142,12 @@ function OpenDashboard() {
             break;
 
         case 'xl':
+            // alert('Extra Large Screen');
             Body_width  = Main_Wrapper_width * 0.8;
-            Dashboard_width  = Main_Wrapper_width * 0.2;
-            Header_width = Body_width;
-            Content_width = Body_width;
-            Footer_width = Body_width;
+            Dashboard_width  = parseInt(Main_Wrapper_width) - parseInt(Body_width);
+            Header_width = Main_Wrapper_width;
+            Content_width = Main_Wrapper_width;
+            Footer_width = Main_Wrapper_width;
 
             Body_margin_left = Dashboard_width;
             break;
@@ -180,17 +184,21 @@ function CloseDashboard() {
 
     Body_height  = Main_Wrapper_height;
     Dashboard_height  = Main_Wrapper_height;
-    Header_height = ToggleButtonHeight;
+    // Header_height = ToggleButtonHeight;
     Content_height = Main_Wrapper_height - (parseInt(ToggleButtonHeight) + parseInt(ThemeButtonHeight)) ;
     Footer_height = ThemeButtonHeight;
 
-    Body_width  = Main_Wrapper_width * 0.95;
-    Dashboard_width  = Main_Wrapper_width * 0.5;
+
+    Body_margin_left = $('#Icon').outerWidth() /*parseInt(Main_Wrapper_width) * 0.05*/;
+
+
+    Body_width  = Main_Wrapper_width - parseInt(Body_margin_left);
+    Dashboard_width  = Body_width * 0.25;
     Header_width = Body_width;
     Content_width = Body_width;
     Footer_width = Body_width;
 
-    Body_margin_left = parseInt(Main_Wrapper_width) * 0.05;
+
 
     MAIN_WRAPPER.height(Main_Wrapper_height);
     BODY.height(Body_height);
